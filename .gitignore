@@ -1,0 +1,4 @@
+# Project exclude paths
+/spboot01/target/
+/spboot02/target/
+/spboot04/target/

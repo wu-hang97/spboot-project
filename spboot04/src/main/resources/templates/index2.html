@@ -1,0 +1,25 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+<h3 th:if="${flag}">中国</h3>
+<table width="200" style="text-align: center;" border="1" >
+    <tr>
+        <th>编号</th>
+        <th>姓名</th>
+        <th>年龄</th>
+        <th>索引</th>
+    </tr>
+    <tr th:each="user,iterStart: ${userList}" th:style="${iterStart.even?'background: red':''}" >
+        <td th:text="${user.id}"></td>
+        <td th:text="${user.name}"></td>
+        <td th:text="${user.age}"></td>
+        <td th:text="${iterStart.index}"></td>
+    </tr>
+</table>
+</body>
+</html>
